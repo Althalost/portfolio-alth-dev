@@ -8,9 +8,10 @@ import MailSendIcon from '../components/icons/MailSend.astro';
 import BriefcaseIcon from '../components/icons/Briefcase.astro';
 import CodeIcon from '../components/icons/Code.astro';
 import SocialPill from '../components/SocialPill.astro';
-import Experience from '../components/Experience.astro';
+import Studies from '../components/Studies.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
 ---
 
 <Layout 
@@ -18,25 +19,25 @@ import Projects from '../components/Projects.astro';
 	description="Contrata a althdev para crear tu aplicacion web"
 >
 	<main class="px-4">
-		<SectionContainer class="pt-44 pb-32">
+		<SectionContainer class="section text-gray-800 py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
 
 			<img 
 				class="rounded-full size-12 mb-4"
 				src="https://avatars.githubusercontent.com/u/80772336?v=4&size=64" 
 				alt="alth-dev photo">
 
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+			<h1 class="text-gray-800 dark:text-gray-200 text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
 				Hey, soy Pablo <a href="https://linkedin.com/in/pablo-elias-lópez-marcano-114345208" target="_blank" class="flex justify-center items-center mt-2">
 					<Badge>Disponible para trabajar</Badge>
 				</a> 
 			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[500px]">
-				<span>+2 años de experiencia.</span> <span
-				class="text-yellow-200/90">Desarrolador Web y Tecnico en Informatica.</span> De 
-				Caracas, Venezuela. Especializado en Crear Paginas Web Estables y Confiables
+			<h2 class="text-xl dark:text-gray-200 lg:text-2xl text-wrap max-w-[700px]">
+				<span></span> 
+				<span class="text-yellow-600 dark:text-yellow-200/90">Desarrolador Web y Tecnico en Informatica.</span> <br>
+				Especializado en Crear Paginas Web Estables y Confiables
 			</h2>
 
-			<nav class="flex gap-4 mt-8 flex-wrap">
+			<nav class="flex gap-4 mt-8 flex-wrap dark:text-gray-200">
 
 				<SocialPill href="https://linkedin.com/in/pablo-elias-lópez-marcano-114345208" >
 					<LinkedInIcon class="size-4 lg:size-6" />
@@ -48,9 +49,9 @@ import Projects from '../components/Projects.astro';
 					GitHub
 				</SocialPill>
 
-				<SocialPill href="https://github.com/Althalost" >
+				<SocialPill href="mailto:pablolopez101200@gmail.com" >
 					<MailSendIcon class="size-4 lg:size-6" />
-					pablolopez@gmail.com
+					Contactame
 				</SocialPill>
 
 			</nav>
@@ -58,21 +59,33 @@ import Projects from '../components/Projects.astro';
 
 		</SectionContainer>
 
-		<SectionContainer id="experience">
-			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
-				<BriefcaseIcon class="size-8" />
-				Experiencia laboral
-			</h2>
-			<Experience />
-		</SectionContainer>
+		<div class="p-y-24">
+			<SectionContainer id="studies" class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
+					<BriefcaseIcon class="size-8" />
+					Estudios
+				</h2>
+				<Studies />
+			</SectionContainer>
+	
+			<SectionContainer id="projects" class="section py-24 undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
+					<CodeIcon class="size-8" />
+					Proyectos
+				</h2>
+				<div class="space-y-24">
+					<Projects />
+				</div>
+			</SectionContainer>
 
-		<SectionContainer id="projects">
-			<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
-				<CodeIcon class="size-8" />
-				Proyectos
-			</h2>
-			<Projects />
-		</SectionContainer>
+			<SectionContainer id="about" class="py-24">
+				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
+					<CodeIcon class="size-8" />
+					Sobre mí
+				</h2>
+				<AboutMe />
+			  </SectionContainer>
+		</div>
 
 	</main>
 </Layout>

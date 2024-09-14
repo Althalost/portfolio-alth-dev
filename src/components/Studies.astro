@@ -1,0 +1,38 @@
+---
+import StudiesItem from "./StudiesItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente",
+        title: "PNF de Ingenieria Informatica",
+        institucion: "U.P.T.E.C. Mariscal Sucre.",
+        description:
+            `Profesionales en ingeniería informática con experiencia en el diseño, desarrollo y mantenimiento de sistemas de software y 
+            hardware. Competente en la implementación de soluciones tecnológicas innovadoras que optimizan el procesamiento y la gestión 
+            de la información. Habilidades destacadas en programación, redes y ciberseguridad. Comprometido con el avance 
+            tecnológico y la mejora continua de procesos.`,
+        link: "#",
+    },
+    {
+        date: "Agosto 2024",
+        title: "Tecnico Superior Universitario en Informatica",
+        institucion: "U.P.T.E.C. Mariscal Sucre.",
+        description:
+            `Profesional técnico en informática con habilidades en el desarrollo, implementación y mantenimiento de 
+            sistemas y aplicaciones informáticas. Experiencia en programación, gestión de bases de datos y administración 
+            de redes. Capaz de analizar necesidades tecnológicas y diseñar soluciones eficientes. Comprometido con la mejora 
+            continua y la innovación en el ámbito de las tecnologías de la información.`,
+        link: "#",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-800 dark:border-gray-200 ml-4">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4 group">
+                <StudiesItem {...experience} />
+            </li>
+        ))
+    } 
+</ol>

@@ -5,7 +5,7 @@ import Tailwind from './icons/Tailwind.astro'
 const TAGS = {
     LARAVEL: {
         name: "Laravel",
-        class: "bg-black text-red",
+        class: "bg-black/80 text-white",
         icon: Laravel,
     },
     TAILWIND: {
@@ -17,33 +17,51 @@ const TAGS = {
 
 const PROJECTS = [
     {
-        title: 'Project 1',
+        title: 'Blog Dinámico con Laravel, Livewire y Tailwind CSS',
+        description: 'Este proyecto es un blog dinámico desarrollado utilizando Laravel como framework principal, Livewire para la creación de componentes interactivos y Tailwind CSS para el diseño responsivo. El blog permite la gestión eficiente de publicaciones, con funcionalidades de paginación y actualización en tiempo real sin necesidad de recargar la página. Además, ofrece una interfaz moderna y atractiva, optimizada para una experiencia de usuario fluida y rápida.',
+        link: '#',
+        github: '#',
+        image: '/projects/project2.webp',
+        tags: [TAGS.LARAVEL, TAGS.TAILWIND],
+    },
+    {
+        title: 'Project 2',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, aliquid deleniti? Dolorum omnis vero corporis cumque, numquam nisi in repellendus quas suscipit vel beatae. Dolore aut deleniti laboriosam quo eius.',
         link: '#',
         github: '#',
         image: '/projects/project1.webp',
         tags: [TAGS.LARAVEL, TAGS.TAILWIND],
-    }
+    },
 ]
 ---
 
 {
     PROJECTS.map(({title, description, image, tags}) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {tags.map((tag)=> (
-                    <li>
-                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                            <tag.icon class="size-4"/>
-                            {tag.name}  
-                        </span>
-                    </li>
-                ))
-                }
-            </ul>
-            <img class="rounded shadow-2xl shadow-white/20" src={image} alt={`Screenshot from project ${title}`}>
+        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+            <div class="w-full md:w-1/2">
+                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800/40 lg:hover:border-gray-700/40">
+                    <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} alt={`Screenshot from project ${title}`}>
+                </div>
+                
+            </div>
+            <div class="w-full md:w-1/2 md:max-w-lg">
+                <h3 class="text-2xl font-semibold tracking-tight text-gray-900 dark:text-yellow-200 mb-2">{title}</h3>
+                <div class="flex flex-wrap mt-2">
+                    <ul class="flex gap-x-2 flex-row mb-2">
+                        {tags.map((tag)=> (
+                            <li>
+                                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                    <tag.icon class="size-4"/>
+                                    {tag.name}  
+                                </span>
+                            </li>
+                        ))
+                        }
+                    </ul>
+                    <p class="mt-2 text-gray-700 dark:text-gray-300">{description}</p> 
+                </div>
+               
+            </div>
         </article>
     ))
 }

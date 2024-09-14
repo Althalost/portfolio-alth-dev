@@ -1,0 +1,63 @@
+---
+interface Props {
+    date: string;
+    title: string;
+    institucion: string;
+    description: string;
+    link?: string;
+}
+const { date, title, institucion, description, link } = Astro.props;
+---
+
+<div class="absolute w-3 h-3 bg-gray-800 rounded-full mt-1.5 -start-1.5 border border-black dark:border-gray-200 dark:bg-gray-300"></div>
+<div
+    class="absolute w-3 h-3 bg-gray-800 rounded-full mt-1.5 -start-1.5 border border-black dark:border-gray-200 dark:bg-gray-300 transition duration-500 delay-200
+          group-hover:border-0 group-hover:shadow-xl group-hover:shadow-gray-800 md:group-hover:mt-0 md:group-hover:size-6 md:group-hover:-start-3 md:group-hover:translate-y-56 group-hover:bg-gray-800
+        md:group-hover:dark:shadow-white md:group-hover:dark:bg-white"
+>
+</div>
+<time
+    class="mb-1 text-sm font-normal leading-none text-gray-700 dark:text-gray-200"
+    >{date}</time
+>
+<h3
+    class="text-lg font-semibold text-yellow-600/80 dark:text-yellow-200/80 mt-2"
+>
+    {title}
+</h3>
+<h3
+    class="text-lg font-semibold text-gray-700 dark:text-gray-200/80 mt-2"
+>
+    {institucion}
+</h3>
+<p
+    class="mb-4 text-base font-normal text-gray-700 text-pretty dark:text-gray-300"
+>
+    {description}
+</p>
+{
+    link && (
+        <a
+            href={link}
+            class="inline-flex items-center px-4 py-2 text-base font-medium text-gray-900 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-gray-100 focus:text-blue-700
+            dark:text-gray-300 dark:hover:text-white"
+        >
+            Saber mas ...{" "}
+            <svg
+                class="w-3 h-3 ms-2 rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+            </svg>
+        </a>
+    )
+}
