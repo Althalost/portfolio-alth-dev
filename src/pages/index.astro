@@ -6,8 +6,19 @@ import LinkedInIcon from '../components/icons/Linkedin.astro';
 import GitHubIcon from '../components/icons/GitHub.astro';
 import MailSendIcon from '../components/icons/MailSend.astro';
 import BriefcaseIcon from '../components/icons/Briefcase.astro';
+import StackIcon from '../components/icons/Stack.astro';
 import CodeIcon from '../components/icons/Code.astro';
+import JavascriptIcon from '../components/icons/Javascript.astro';
+import HtmlIcon from '../components/icons/Html.astro';
+import TailwindIcon from '../components/icons/Tailwind.astro';
+import MySQLIcon from '../components/icons/MySQL.astro';
+import LaravelIcon from '../components/icons/Laravel.astro';
+import VscodeIcon from '../components/icons/Vscode.astro';
+import GitIcon from '../components/icons/Git.astro';
+import CssIcon from '../components/icons/Css.astro';
+import PhpIcon from '../components/icons/Php.astro';
 import SocialPill from '../components/SocialPill.astro';
+import Tecnologies from '../components/Tecnologies.astro';
 import Studies from '../components/Studies.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
@@ -67,6 +78,7 @@ import AboutMe from '../components/AboutMe.astro';
 				</h2>
 				<Studies />
 			</SectionContainer>
+
 	
 			<SectionContainer id="projects" class="section py-24 undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
 				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
@@ -76,6 +88,53 @@ import AboutMe from '../components/AboutMe.astro';
 				<div class="space-y-24">
 					<Projects />
 				</div>
+			</SectionContainer>
+
+			<SectionContainer id="tecnologies" class="section py-10 undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
+					<StackIcon class="size-8" />
+					Tecnologias
+				</h2>
+				<p  class="text-xl mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
+					Mi stack tecnológico abarca una amplia gama de lenguajes, frameworks y herramientas. A continuación, te presento aquellos en los que tengo mayor dominio.
+				</p>
+				
+				<Tecnologies>
+					<HtmlIcon class="size-12 m-2"/>
+				</Tecnologies>
+
+				<Tecnologies>
+					<JavascriptIcon class="size-12 m-2" />
+				</Tecnologies>
+
+				<Tecnologies>
+					<CssIcon class="size-12 m-2" />
+				</Tecnologies>
+
+				<Tecnologies>
+					<TailwindIcon class="size-12 m-2" />
+				</Tecnologies>
+
+				<Tecnologies>
+					<MySQLIcon class="size-12 m-2" />
+				</Tecnologies>
+				
+				<Tecnologies>
+					<PhpIcon class="size-12 m-2" />
+				</Tecnologies>
+
+				<Tecnologies>
+					<LaravelIcon class="size-12 m-2" />
+				</Tecnologies>
+				
+				<Tecnologies>
+					<VscodeIcon class="size-12 m-2" />
+				</Tecnologies>
+
+				<Tecnologies>
+					<GitIcon class="size-12 m-2" />
+				</Tecnologies>
+				
 			</SectionContainer>
 
 			<SectionContainer id="about" class="py-24">

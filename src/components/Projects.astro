@@ -1,6 +1,8 @@
 ---
 import Laravel from './icons/Laravel.astro'
 import Tailwind from './icons/Tailwind.astro'
+import GitHubIcon from './icons/GitHub.astro'
+import SocialPill from './SocialPill.astro'
 
 const TAGS = {
     LARAVEL: {
@@ -20,7 +22,7 @@ const PROJECTS = [
         title: 'Blog Dinámico con Laravel, Livewire y Tailwind CSS',
         description: 'Este proyecto es un blog dinámico desarrollado utilizando Laravel como framework principal, Livewire para la creación de componentes interactivos y Tailwind CSS para el diseño responsivo. El blog permite la gestión eficiente de publicaciones, con funcionalidades de paginación y actualización en tiempo real sin necesidad de recargar la página. Además, ofrece una interfaz moderna y atractiva, optimizada para una experiencia de usuario fluida y rápida.',
         link: '#',
-        github: '#',
+        github: 'https://github.com/Althalost/blog',
         image: '/projects/project2.webp',
         tags: [TAGS.LARAVEL, TAGS.TAILWIND],
     },
@@ -28,7 +30,7 @@ const PROJECTS = [
         title: 'Sistema de Gestión de Datos Estudiantiles para Escuelas Primarias',
         description: 'Desarrollado con Laravel y Filament PHP, este sistema web está diseñado para facilitar la gestión de los datos personales de los estudiantes en escuelas primarias. Ofrece una interfaz intuitiva y segura para registrar, actualizar y consultar información esencial de los alumnos, incluyendo datos personales, académicos y de contacto. Con funcionalidades avanzadas de búsqueda y filtrado, este sistema asegura que los administradores escolares puedan acceder rápidamente a la información necesaria, mejorando la eficiencia y la organización en la gestión educativa.',
         link: '#',
-        github: '#',
+        github: 'https://github.com/Althalost/SGEPBF',
         image: '/projects/project3.webp',
         tags: [TAGS.LARAVEL, TAGS.TAILWIND],
     },
@@ -36,11 +38,11 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({title, description, image, tags}) => (
-        <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+    PROJECTS.map(({title, description, image, github, tags}) => (
+       /*  <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
             <div class="w-full md:w-1/2">
                 <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800/40 lg:hover:border-gray-700/40">
-                    <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} alt={`Screenshot from project ${title}`}>
+                    <img class="object-cover object-top w-full h-80 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} alt={`Screenshot from project ${title}`}>
                 </div>
                 
             </div>
@@ -60,8 +62,20 @@ const PROJECTS = [
                     </ul>
                     <p class="mt-2 text-gray-700 dark:text-gray-300">{description}</p> 
                 </div>
-               
+                {github && (
+                <SocialPill href={github}>
+                    <GitHubIcon class="size-6" />
+                    Codigo
+                </SocialPill>
+            )}
             </div>
-        </article>
+        </article> */ 
+        <a href="#" class=" flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover rounded-t-lg h-48 md:h-80 md:rounded-none md:rounded-s-lg" src={image} alt="">
+            <div class="flex flex-col justify-between p-4 md:h-80 md:w-96 overflow-hidden py-2 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+                <p class="mb-3 font-normal w-full text-justify text-gray-700 dark:text-gray-400">{description}</p>
+            </div>
+        </a>
     ))
 }
