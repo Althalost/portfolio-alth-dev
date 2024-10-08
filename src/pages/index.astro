@@ -30,21 +30,24 @@ import AboutMe from '../components/AboutMe.astro';
 	description="Contrata a althdev para crear tu aplicacion web"
 >
 	<main class="px-4">
-		<SectionContainer class="section text-gray-800 py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
+		<SectionContainer id="top" class="section text-gray-800 py-16 md:py-36 scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
 
-			<img 
-				class="rounded-full size-12 mb-4"
-				src="https://avatars.githubusercontent.com/u/80772336?v=4&size=64" 
-				alt="alth-dev photo">
-
-			<h1 class="text-gray-800 dark:text-gray-200 text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hey, soy Pablo <a href="https://linkedin.com/in/pablo-elias-lópez-marcano-114345208" target="_blank" class="flex justify-center items-center mt-2">
+			<h1 class="text-gray-800 dark:text-gray-300 text-3xl md:text-3xl lg:text-4xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-5">
+				Hey, soy
+			</h1>
+			<h1 class="bg-gradient-to-r from-blue-600 via-purple-700 to-blue-600 bg-clip-text w-svw text-transparent text-3xl md:text-4xl lg:text-6xl font-bold flex flex-row flex-wrap gap-x-4 gap-y-2 pb-4 lg:pb-8">
+				<img 
+					class="rounded-full size-12 mt-[-7px] md:mt-[-5] lg:mt-1 ring ring-blue-500"
+					src="https://avatars.githubusercontent.com/u/80772336?v=4&size=64" 
+					alt="alth-dev photo">
+					Pablo Lopez
+				<a href="https://linkedin.com/in/pablo-elias-lópez-marcano-114345208" target="_blank" class="flex justify-center items-center mt-2">
 					<Badge>Disponible para trabajar</Badge>
 				</a> 
 			</h1>
 			<h2 class="text-xl dark:text-gray-200 lg:text-2xl text-wrap max-w-[800px]">
 				<span></span> 
-				<span class="text-yellow-600 dark:text-yellow-200/90">Apasionado Desarrollador Web, Backend y Full Stack con Laravel</span> <br>
+				<span class="text-blue-700 dark:text-blue-500 font-semibold">Apasionado Desarrollador Web, Backend/Full Stack en Laravel</span> <br>
 				Estoy listo para aportar soluciones innovadoras y eficientes a tus proyectos. ¡Hagamos realidad tus ideas juntos!
 			</h2>
 
@@ -72,8 +75,8 @@ import AboutMe from '../components/AboutMe.astro';
 
 		<div class="p-y-24">
 			<SectionContainer id="studies" class="section undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
-				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
-					<BriefcaseIcon class="size-8" />
+				<h2 class="text-5xl font-semibold mb-6 flex gap-x-3 items-center bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+					<BriefcaseIcon class="size-8 text-blue-500" />
 					Estudios
 				</h2>
 				<Studies />
@@ -81,8 +84,8 @@ import AboutMe from '../components/AboutMe.astro';
 
 	
 			<SectionContainer id="projects" class="section py-24 undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
-				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
-					<CodeIcon class="size-8" />
+				<h2 class="text-5xl font-semibold mb-6 flex gap-x-3 items-center bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text py-2 text-transparent">
+					<CodeIcon class="size-8 text-blue-500" />
 					Proyectos
 				</h2>
 				<div class="space-y-24">
@@ -91,15 +94,15 @@ import AboutMe from '../components/AboutMe.astro';
 			</SectionContainer>
 
 			<SectionContainer id="tecnologies" class="section py-10 undefined scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl">
-				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
-					<StackIcon class="size-8" />
+				<h2 class="text-5xl font-semibold mb-6 flex gap-x-3 items-center  bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text py-2 text-transparent">
+					<StackIcon class="size-8 text-blue-500" />
 					Tecnologias
 				</h2>
 				<p  class="text-xl mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
 					Mi stack tecnológico abarca una amplia gama de lenguajes, frameworks y herramientas. A continuación, te presento aquellos en los que tengo mayor dominio.
 				</p>
 				<div class="grid grid-cols-6 md:grid-cols-8">
-				<div class="col-span-4 col-start-2 md:col-start-3 grid grid-cols-3 gap-6">
+				<div class="col-span-4 col-start-2 md:col-start-3 grid grid-cols-3 gap-6 mt-6">
 					<Tecnologies>
 						<HtmlIcon class="size-12 m-2"/>
 					</Tecnologies>
@@ -141,8 +144,8 @@ import AboutMe from '../components/AboutMe.astro';
 			</SectionContainer>
 
 			<SectionContainer id="about" class="py-24">
-				<h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-gray-900 dark:text-gray-200">
-					<CodeIcon class="size-8" />
+				<h2 class="text-5xl font-semibold mb-6 flex gap-x-3 items-center bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
+					<CodeIcon class="size-8 text-blue-500" />
 					Sobre mí
 				</h2>
 				<AboutMe />
